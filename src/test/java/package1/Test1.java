@@ -19,14 +19,14 @@ public class Test1 {
 
 	}
 	
-	@Test(priority=1)
+	@Test(priority=2)
 	public void navigate_to_main_window(){
 		String parent_win=driver.getWindowHandle();
 		driver.switchTo().window(parent_win);
 		System.out.println("Switched to main window");
 	}
 	
-	@Test(priority=2)
+	@Test(priority=1)
 	public void failing_it(){
 		Assert.assertEquals(1, 2);
 		System.out.println("Force-fully failing it");
